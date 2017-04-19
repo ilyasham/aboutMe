@@ -1,10 +1,11 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Match, Link } from 'react-router'
 
-import Home from '../Home/container'
+import Resume from '../Resume/container'
 import About from '../About/container'
+import Portfolios from '../Portfolios/container'
 
-import logo from './logo.svg'
 import './styles.scss'
 
 export default class App extends Component {
@@ -34,26 +35,26 @@ export default class App extends Component {
   }
 
   render() {
-    const { windowWidth, windowHeight } = this.props
 
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <img src="profile.jpg" className="App-logo" alt="logo" />
+          <div className="App-profile-name">Ilya Shamsudinov</div>
+          <div className="App-profile-title">Freelance Mobile / Web Developer</div>
+
         </div>
-        <p className="App-windowInfo">
-          Window Width: { windowWidth } / Window Height: { windowHeight }
-        </p>
         <nav className="App-mainNav">
           <ul>
-            <li><Link to="/">Home</Link></li>
+            <li><Link to="/resume">Resume</Link></li>
+            <li><Link to="/">Portfolios</Link></li>
             <li><Link to="/about">About</Link></li>
           </ul>
         </nav>
         <div className="App-pageContainer">
-          <Match exactly pattern="/" component={Home} />
+          <Match exactly pattern="/resume" component={Resume} />
           <Match pattern="/about" component={About} />
+          <Match pattern="/" component={Portfolios} />
         </div>
       </div>
     )

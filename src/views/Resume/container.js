@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
 
-import HomeComponent from './component'
+import ResumeComponent from './component'
 
-const HomeContainer = connect(
+const ResumeContainer = connect(
   // Map state to props
   (/*state*/) => ({}),
   // Map actions to dispatch and props
   {}
-)(HomeComponent)
+)(ResumeComponent)
 
-export default HomeContainer
+export default ResumeContainer

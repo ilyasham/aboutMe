@@ -1,25 +1,31 @@
-.App {
+@import '../../mixin';
+@include fontFace('MyFont','OpenSans-Light');
+
+.App-header {
   text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  //animation: App-logo-spin infinite 20s linear;
+  height: 120px;
+  border-radius: 61px;
+  border: 2px solid #e1f5ff;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #316331;
+  height: 180px;
   padding: 20px;
   color: white;
 }
 
-@keyframes App-logo-spin {
+/*@keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+}*/
 
 .App-mainNav {
+  margin-top: 1em;
   ul {
     list-style: none;
     display: inline-block;
@@ -31,4 +37,15 @@
       padding: 0 20px;
     }
   }
+}
+
+.App-profile-name {
+  font-family: MyFont;
+  font-size: 1.7em;
+}
+
+.App-profile-title {
+  margin-top: 0.4em;
+  font-weight: 100;
+  font-size: 0.8em;
 }
